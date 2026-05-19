@@ -69,13 +69,12 @@ const WaveBackground = () => (
 
 const TypingEffect = () => {
   const words = [
-    "Hybrid applications.",
-    "iOS Apps.",
-    "Android Apps.",
-    "Websites.",
-    "Desktop Apps.",
-    "Senior Flutter Developer.",
-    "Team Lead."
+    "Android & iOS Mobile Apps.",
+    "Native Android Developer.",
+    "React, Next.js & NestJS Websites.",
+    "Cross-Platform Desktop Apps.",
+    "Senior Flutter Solutions.",
+    "Technical Team Leadership."
   ];
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -90,17 +89,17 @@ const TypingEffect = () => {
       if (displayedText.length < activeWord.length) {
         timer = setTimeout(() => {
           setDisplayedText(activeWord.slice(0, displayedText.length + 1));
-        }, 120);
+        }, 100);
       } else {
         timer = setTimeout(() => {
           setIsDeleting(true);
-        }, 2000);
+        }, 2500);
       }
     } else {
       if (displayedText.length > 0) {
         timer = setTimeout(() => {
           setDisplayedText(activeWord.slice(0, displayedText.length - 1));
-        }, 60);
+        }, 40);
       } else {
         setIsDeleting(false);
         setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
@@ -115,9 +114,10 @@ const TypingEffect = () => {
       display: 'inline-block', 
       position: 'relative', 
       whiteSpace: 'nowrap',
-      verticalAlign: 'bottom'
+      verticalAlign: 'bottom',
+      color: '#38bdf8'
     }}>
-      <span className="gradient-text" style={{ 
+      <span style={{ 
         display: 'inline-block',
         WebkitBackfaceVisibility: 'hidden',
         backfaceVisibility: 'hidden',
@@ -126,6 +126,7 @@ const TypingEffect = () => {
         {displayedText || '\u00A0'}
       </span>
       <span className="typing-cursor" style={{
+        color: '#38bdf8',
         WebkitBackfaceVisibility: 'hidden',
         backfaceVisibility: 'hidden',
         transform: 'translate3d(0,0,0)'
@@ -299,16 +300,27 @@ export default function Home() {
                 variants={fadeIn} 
                 style={{ 
                   fontSize: 'clamp(2.5rem, 6.5vw, 4.5rem)', 
-                  marginBottom: '1.5rem', 
+                  marginBottom: '1rem', 
                   letterSpacing: '-0.02em',
                   fontWeight: 800,
                   lineHeight: 1.15
                 }}
               >
-                Sup, I'm <span className="gradient-text">Ikram Ullah.</span> <br />
-                I'm a developer of <br />
-                <TypingEffect />
+                Hi, I'm <span className="gradient-text">Ikram Ullah.</span>
               </motion.h1>
+              
+              <motion.h2
+                variants={fadeIn}
+                style={{
+                  fontSize: 'clamp(1.6rem, 4vw, 2.2rem)',
+                  color: 'var(--text-primary)',
+                  marginBottom: '1.5rem',
+                  fontWeight: 700,
+                  lineHeight: 1.2
+                }}
+              >
+                I build <TypingEffect />
+              </motion.h2>
               
               <motion.p 
                 variants={fadeIn} 
@@ -320,7 +332,7 @@ export default function Home() {
                   lineHeight: 1.6
                 }}
               >
-                Senior Flutter Developer & Team Lead at dZONE Solutions with over 7 years of experience in cross-platform mobile apps, enterprise web ecosystems, and robust desktop products.
+                Senior Flutter Developer & Team Lead at dZONE Solutions with 8+ years of experience in cross-platform mobile apps, enterprise web ecosystems, and robust desktop products.
               </motion.p>
               
               <motion.div variants={fadeIn} className="hero-buttons" style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start' }}>
@@ -350,7 +362,7 @@ export default function Home() {
               <div style={{ flex: '1 1 400px' }}>
                 <motion.h2 variants={fadeIn} className="section-title" style={{ textAlign: 'left' }}>About <span className="gradient-text">Me</span></motion.h2>
                 <motion.p variants={fadeIn} style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-                  Result-driven Senior Flutter Developer and Team Lead with over 7 years of professional experience. I have a proven track record of architecting scalable, high-performance solutions using Flutter and full-stack JavaScript architectures for diverse international markets including Saudi Arabia, Malaysia, the UK, and Australia.
+                  Result-driven Senior Flutter Developer and Team Lead with 8+ years of professional experience. I have a proven track record of architecting scalable, high-performance solutions using Flutter and full-stack JavaScript architectures for diverse international markets including Saudi Arabia, Malaysia, the UK, and Australia.
                 </motion.p>
                 <motion.p variants={fadeIn} style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem' }}>
                   I hold a Bachelor of Science in Computer Science from the University of Lahore. Beyond coding, I'm passionate about AI, IoT, and Robotics, and love exploring different cultures through travel and playing sports like cricket and football.

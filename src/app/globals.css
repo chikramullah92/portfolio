@@ -574,6 +574,11 @@ footer {
     text-align: center;
   }
   
+  .hero-section h2 {
+    font-size: clamp(1.4rem, 5vw, 1.8rem) !important;
+    text-align: center;
+  }
+  
   .hero-section p {
     text-align: center;
     font-size: 1rem !important;
