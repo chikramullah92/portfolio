@@ -69,13 +69,13 @@ const WaveBackground = () => (
 
 const TypingEffect = () => {
   const words = [
-    "Android apps.",
-    "iOS apps.",
+    "Hybrid applications.",
+    "iOS Apps.",
+    "Android Apps.",
     "Websites.",
-    "Desktop apps.",
-    "Flutter.",
-    "React.",
-    "Team Leadership."
+    "Desktop Apps.",
+    "Senior Flutter Developer.",
+    "Team Lead."
   ];
 
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -254,7 +254,7 @@ export default function Home() {
             className="nav-logo"
             style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}
           >
-            <img src="/logo-only.png" alt="Ikram Ullah Logo" style={{ width: '56px', height: '56px', borderRadius: '12px' }} />
+            <img src="/logo-only.png" alt="Ikram Ullah Logo" className="header-logo-img" />
             <span className="gradient-text">Ikramullah.</span>
           </motion.div>
           <motion.div 
@@ -264,7 +264,7 @@ export default function Home() {
           >
             <a href="#about" className="nav-link">About</a>
             <a href="#work" className="nav-link">Work</a>
-            <a href="#contact" className="btn btn-primary" style={{ padding: '0.5rem 1rem', fontSize: '0.875rem' }}>Let's Talk</a>
+            <a href="#contact" className="btn btn-primary nav-talk-btn">Let's Talk</a>
           </motion.div>
         </div>
       </nav>
@@ -274,7 +274,7 @@ export default function Home() {
         <section className="hero-section" style={{ display: 'flex', alignItems: 'center', minHeight: '100vh', position: 'relative', overflow: 'hidden' }}>
           <WaveBackground />
           
-          <div className="container" style={{ textAlign: 'left', zIndex: 10, position: 'relative', width: '100%', paddingLeft: '2rem' }}>
+          <div className="container hero-content-container">
             <motion.div
               initial="hidden"
               animate="visible"
@@ -320,10 +320,10 @@ export default function Home() {
                   lineHeight: 1.6
                 }}
               >
-                Senior Developer & Department Lead at dZONE Solutions with over 7 years of experience in cross-platform mobile apps, enterprise web ecosystems, and robust desktop products.
+                Senior Flutter Developer & Team Lead at dZONE Solutions with over 7 years of experience in cross-platform mobile apps, enterprise web ecosystems, and robust desktop products.
               </motion.p>
               
-              <motion.div variants={fadeIn} style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start' }}>
+              <motion.div variants={fadeIn} className="hero-buttons" style={{ display: 'flex', gap: '1rem', justifyContent: 'flex-start' }}>
                 <a href="#work" className="btn btn-primary" style={{ padding: '0.75rem 2rem' }}>
                   View My Work <ArrowRight size={18} style={{ marginLeft: '0.5rem' }} />
                 </a>
@@ -333,16 +333,6 @@ export default function Home() {
               </motion.div>
             </motion.div>
 
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.5, duration: 1 }}
-              className="scroll-indicator-wrapper"
-            >
-              <a href="#about" className="mouse-indicator">
-                <div className="mouse-wheel"></div>
-              </a>
-            </motion.div>
           </div>
         </section>
 
@@ -360,7 +350,7 @@ export default function Home() {
               <div style={{ flex: '1 1 400px' }}>
                 <motion.h2 variants={fadeIn} className="section-title" style={{ textAlign: 'left' }}>About <span className="gradient-text">Me</span></motion.h2>
                 <motion.p variants={fadeIn} style={{ color: 'var(--text-secondary)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
-                  Result-driven Senior Developer and Department Lead with over 7 years of professional experience. I have a proven track record of architecting scalable, high-performance solutions using Flutter and full-stack JavaScript architectures for diverse international markets including Saudi Arabia, Malaysia, the UK, and Australia.
+                  Result-driven Senior Flutter Developer and Team Lead with over 7 years of professional experience. I have a proven track record of architecting scalable, high-performance solutions using Flutter and full-stack JavaScript architectures for diverse international markets including Saudi Arabia, Malaysia, the UK, and Australia.
                 </motion.p>
                 <motion.p variants={fadeIn} style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem' }}>
                   I hold a Bachelor of Science in Computer Science from the University of Lahore. Beyond coding, I'm passionate about AI, IoT, and Robotics, and love exploring different cultures through travel and playing sports like cricket and football.
@@ -483,7 +473,7 @@ export default function Home() {
             >
               <h2 className="section-title" style={{ marginBottom: '1rem' }}>Let's Build Together</h2>
               <p style={{ color: 'var(--text-secondary)', maxWidth: '500px', margin: '0 auto 2.5rem auto', fontSize: '1.1rem' }}>
-                I'm currently open to new opportunities, custom department leadership collaborations, and exciting freelance platforms. Feel free to connect!
+                I'm currently open to new opportunities, custom team leadership collaborations, and exciting freelance platforms. Feel free to connect!
               </p>
 
               {/* Connected channels */}
@@ -524,7 +514,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <a href="mailto:reply2ikramullah@gmail.com" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: '1.125rem' }}>
+              <a href="mailto:reply2ikramullah@gmail.com" className="btn btn-primary btn-say-hello">
                 Say Hello
               </a>
             </motion.div>
