@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   keywords: ["Ikram Ullah", "Senior Developer", "Department Lead", "Flutter", "Next.js", "NestJS", "React", "Mobile App Developer", "Full Stack Developer", "Software Engineer"],
   authors: [{ name: "Ikram Ullah" }],
   creator: "Ikram Ullah",
-  metadataBase: new URL("https://ikram-dev.vercel.app"),
+  metadataBase: new URL("https://dev-ikram.vercel.app"),
   openGraph: {
     title: "Ikram Ullah | Senior Developer & Department Lead",
     description: "Personal portfolio of Ikram Ullah, Senior Developer and Department Lead, showcasing mobile, web, and desktop software ecosystems.",
-    url: "https://ikram-dev.vercel.app",
+    url: "https://dev-ikram.vercel.app",
     siteName: "Ikram Ullah Portfolio",
     type: "website",
     locale: "en_US",
