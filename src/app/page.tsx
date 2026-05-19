@@ -254,7 +254,7 @@ export default function Home() {
             className="nav-logo"
             style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}
           >
-            <img src="/logo.png" alt="Ikram Ullah Logo" style={{ width: '32px', height: '32px', borderRadius: '8px' }} />
+            <img src="/logo-only.png" alt="Ikram Ullah Logo" style={{ width: '56px', height: '56px', borderRadius: '12px' }} />
             <span className="gradient-text">Ikramullah.</span>
           </motion.div>
           <motion.div 
